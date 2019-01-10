@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>WaveVisualisator (WV)</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyATVG4uaEGNlcXpM8bAX-ftNwiiHBTh4zY",
+    authDomain: "projetprog-aff3d.firebaseapp.com",
+    databaseURL: "https://projetprog-aff3d.firebaseio.com",
+    projectId: "projetprog-aff3d",
+    storageBucket: "projetprog-aff3d.appspot.com",
+    messagingSenderId: "242372721062"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<div class="wave-container">
+  <canvas height= "600" width= "600" id="canvas"></canvas>
+  <div id ="panel">
+    <div class="btn">
+      <input type="button" value="start machine" id="startbtn">
+    </div>
+    <div class="btn">
+      <input type="button" value="clear" id="clear"> 
+    </div>
+    <div class="form-block">
+      <p>Frequency</p>
+      <input type="range" id="freq" min="10" max="200" step ="1" value="150"></input>  
+    </div>
+    <div class="form-block">
+      <p>Amplitude</p>
+      <input type="range" id="gain" min="2" max="300" step ="2" value="70" ></input>
+    </div>
+    <div class="form-block">
+      <p>Decibel reference</p>
+       <input type="range" id="db" min="1" max="100" step ="1" value= "20"></input>
+    </div>
+    <div class="form-block">
+       <p>Damping</p>
+      <input type="range" id="damp" min="0" max="0.1" step ="0.001" value="0.02"></input>
+    </div>
+    <form id ="radio">
+      <div class="first-line">
+        <input type="radio" name="click-type" value="Mic" class="radio-options">Microphone
+      <input type="radio" name="click-type" value="Wall" checked="checked"  class="radio-options">Wall
+      <input type="radio" name="click-type" value="Sin" checked="checked"  class="radio-options">Sin
+      </div>
+      
+      <div class="second-line">
+      <input type="radio" name="click-type" value="Wave"  class="radio-options">Wave
+      <input type="radio" name="click-type" value="Nothing"  class="radio-options">Nothing 
+        
+      </div>
+     
+    </form>
+  </div>
+</div>
+  
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

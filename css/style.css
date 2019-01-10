@@ -1,0 +1,75 @@
+.wave-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#canvas{
+  border: 2px solid #111111;
+  background-color: rgb(0, 0,35 );
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  display: block;
+
+}
+#radio{
+  display: flex;
+  flex-direction: column;
+
+  padding: 10px;
+  margin-top: 20px;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.first-line {
+  margin-bottom: 20px;
+}
+
+#radio input {
+ 
+}
+#panel{
+  position: relative;
+  box-shadow: 2px 2px 2px rgb(200 200 200);
+  width: 300px;
+  padding: 20px;
+  margin: 2px;
+  
+  
+}
+
+#panel > * {
+  display: inline-flex;
+  padding-top:5px;  
+}
+
+.wave-container > *{
+  
+}
+
+.form-block {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.btn input {
+  background-color: transparent;
+  border: #88EAA5 solid 3px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.btn {
+  padding: 10px;
+  font-weight: bold;
+}
+
+.btn:hover input {
+  background-color: #88EAA5;
+  color: white;
+  border: #88EAA5 solid 3px;
+}
+
